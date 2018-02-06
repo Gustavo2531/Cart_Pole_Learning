@@ -1,0 +1,18 @@
+(defun FactRec (N)
+  (if (= N 0) 1
+    (* N (FactRec (- N 1)))))
+
+
+(defun FactTail (N &optional (Acc 1))
+  (if (= N 0)
+      Acc
+    (FactTail (- N 1) (* N Acc ))))
+
+(defun H (N) 
+  (if (= N 1) 1
+    (+ (H (1- N)) (/ 1 N))))
+
+(defun sq-list (N)
+(if (null N) nil 
+	(cons (* (car N) (car N))
+		(sq-list (cdr N)))))
